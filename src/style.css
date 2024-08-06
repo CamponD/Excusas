@@ -1,1 +1,16 @@
-@import "~bootstrap/dist/css/bootstrap.min.css";
+body {
+  height: 100%;
+  display: flex;
+}
+
+.divFather {
+  margin: auto;
+  margin-top: 20%;
+  text-align: center;
+}
+
+p {
+  font-size: 50px;
+  font-weight: 800;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
