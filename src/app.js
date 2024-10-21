@@ -6,6 +6,15 @@ import "./index.html";
 //import "./assets/img/rigo-baby.jpg";
 //import "./assets/img/4geeks.ico";
 
+function generaExcusa(quien, accion, objeto, cuando) {
+  let grupoArreglos = [quien, accion, objeto, cuando];
+  for (let i = 0; i < 3; i++) {
+    let random = Math.floor(Math.random() * 4);
+    let textoCambiado = document.querySelector(".excusa");
+    textoCambiado.innerHTML += grupoArreglos[i][random];
+  }
+}
+
 let quien = ["My dog ", "My grandma ", "The dentist ", "the neighbor's cat "];
 let accion = ["bit ", "found ", "overdid it with ", "almost drowned "];
 let objeto = [
@@ -23,12 +32,5 @@ let cuando = [
 
 window.onload = function() {
   //write your code here
-  let random1 = Math.floor(Math.random() * 4);
-  let random2 = Math.floor(Math.random() * 4);
-  let random3 = Math.floor(Math.random() * 4);
-  let random4 = Math.floor(Math.random() * 4);
-
-  let textoCambiado = document.querySelector(".excusa");
-  textoCambiado.innerHTML =
-    quien[random1] + accion[random2] + objeto[random3] + cuando[random4];
+  generaExcusa(quien, accion, objeto, cuando);
 };
